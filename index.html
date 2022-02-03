@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <title>Document</title>
+
+  <link rel="stylesheet" href="style.css?v2" />
+</head>
+
+<body>
+  <div class="container">
+    <h2 style="width:800px;margin-bottom: 8px">Maç Föyü</h2>
+
+    <input id="gonder" o style="margin-bottom: 4px; padding: 4px;float:right" value="Gönder" type="button" />
+
+    <form action="./macfoykaydet.php">
+      <div style="width:758px;margin-bottom: 8px">
+
+        <label>Lig</label>
+        <input type="text" name="lig" />
+
+        <label>Maç Kodu</label>
+        <input type="text" name="mac_kodu" />
+
+
+        <input onclick="fiksturGetir()" type="button" value="Getir" />
+
+
+      
+
+      </div>
+
+      <table class="mac-foy">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <div id="t1">A</div>
+            </th>
+
+            <th>
+            <th>
+              <div id="t2">B</div>
+            </th>
+            </th>
+
+            <th>Set1</th>
+            <th>Set2</th>
+            <th>Set3</th>
+            <th>Set4</th>
+            <th>Set5</th>
+
+            <th>Maç Sonucu</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><span class="oyuncuHarf">A</span></td>
+
+            <td>
+
+              <select name="mac1_oyuncu1">
+
+              </select>
+
+
+            </td>
+
+            <td><span class="oyuncuHarf">Y</span></td>
+            <td>
+
+              <select name="mac1_oyuncu2">
+
+              </select>
+
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac1_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac1_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac1_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac1_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac1_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac1_skor" /></td>
+          </tr>
+
+          <tr>
+            <td><span class="oyuncuHarf">B</span></td>
+            <td>
+
+              <select name="mac2_oyuncu1">
+
+              </select>
+
+
+            </td>
+
+            <td><span class="oyuncuHarf">X</span></td>
+            <td>
+
+              <select name="mac2_oyuncu2">
+
+              </select>
+
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac2_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac2_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac2_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac2_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac2_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac2_skor" /></td>
+          </tr>
+
+          <tr>
+            <td><span class="oyuncuHarf">C</span></td>
+            <td>
+
+              <select name="mac3_oyuncu1">
+
+              </select>
+
+
+            </td>
+
+            <td><span class="oyuncuHarf">Z</span></td>
+            <td>
+
+              <select name="mac3_oyuncu2">
+
+              </select>
+
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac3_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac3_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac3_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac3_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac3_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac3_skor" /></td>
+          </tr>
+
+
+
+          <tr>
+            <td><span class="oyuncuHarf">Çift</span></td>
+            <td>
+
+              <div>
+                <select name="mac4_oyuncu_1_1">
+
+                </select>
+
+                <select name="mac4_oyuncu_1_2">
+
+                </select>
+
+              </div>
+
+
+
+
+            </td>
+
+            <td><span class="oyuncuHarf">Çift</span></td>
+            <td>
+
+              <div>
+                <select name="mac4_oyuncu_2_1">
+
+                </select>
+
+                <select name="mac4_oyuncu_2_2">
+
+                </select>
+
+              </div>
+
+
+
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac4_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac4_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac4_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac4_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac4_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac4_skor" /></td>
+          </tr>
+
+
+
+          <tr>
+            <td><span class="oyuncuHarf">A</span></td>
+            <td>
+
+              <input class="oyuncuAd_readonly" readonly type="text" name="mac5_oyuncu1" />
+
+            </td>
+
+            <td><span class="oyuncuHarf">X</span></td>
+            <td>
+
+              <input class="oyuncuAd_readonly" readonly type="text" name="mac5_oyuncu2" />
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac5_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac5_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac5_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac5_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac5_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac5_skor" /></td>
+          </tr>
+
+
+          <tr>
+            <td><span class="oyuncuHarf">C</span></td>
+            <td>
+
+              <input class="oyuncuAd_readonly" readonly type="text" name="mac6_oyuncu1" />
+
+            </td>
+
+            <td><span class="oyuncuHarf">Y</span></td>
+            <td>
+
+              <input class="oyuncuAd_readonly" readonly type="text" name="mac6_oyuncu2" />
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac6_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac6_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac6_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac6_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac6_set5" /></td>
+            <td><input readonly class="mac-skor-text" type="text" name="mac6_skor" /></td>
+          </tr>
+
+          <tr>
+            <td><span class="oyuncuHarf">B</span></td>
+            <td>
+
+              <input   type="text" class="oyuncuAd_readonly" readonly name="mac7_oyuncu1" />
+
+            </td>
+
+            <td><span class="oyuncuHarf">Z</span></td>
+            <td>
+
+              <input class="oyuncuAd_readonly" readonly type="text" name="mac7_oyuncu2" />
+            </td>
+
+            <td><input class="set-skor-text" type="text" name="mac7_set1" /></td>
+            <td><input class="set-skor-text" type="text" name="mac7_set2" /></td>
+            <td><input class="set-skor-text" type="text" name="mac7_set3" /></td>
+            <td><input class="set-skor-text" type="text" name="mac7_set4" /></td>
+            <td><input class="set-skor-text" type="text" name="mac7_set5" /></td>
+            <td><input class="mac-skor-text" type="text" name="mac7_skor" /></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div>
+        <span>Maç Sonuç : </span>
+        <input type="text" value="0-0" name="MacFoySonuc" id="MacFoySonuc">
+      </div>
+
+
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    let random1 = Math.random()
+      .toString(36)
+      .replace(/[^a-z]+/g, "")
+      .substr(0, 5);
+
+    document.write(
+      '<script src="macfoy.js?' +
+      random1 +
+      '" type="text/javascript"></scr' +
+      "ipt>"
+    );
+
+  </script>
+</body>
+
+</html>

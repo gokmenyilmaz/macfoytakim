@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.mac-foy {
+  border: 3px double gray;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 50px;
+}
+
+td,
+th {
+  border: 1px solid green;
+  
+}
+
+
+
+select {
+  display: block;
+  min-width: 150px;
+  margin: 4px;
+  background-color: whitesmoke;
+  border-radius:4px;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.oyuncu_isim {
+  width: 150px !important;
+}
+
+.oyuncuHarf {
+  display: block;
+  margin: 2px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+th {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,19,46,1) 50%, rgba(61,60,60,1) 100%);
+  color:whitesmoke;
+  border:2px solid black;
+}
+
+td {
+  border-bottom:0px dotted;
+}
+
+.set-skor-text
+{
+  width: 40px;
+  padding: 4px;
+  margin: 6px;
+  border-radius: 4px;
+}
+
+.mac-skor-text
+{
+  width: 40px;
+  background: lightyellow;
+  padding: 4px;
+  margin: 6px;
+  border-radius: 4px;
+ 
+}
+
+.oyuncuAd_readonly {
+  width: 145px;
+  background: rgb(241, 239, 239);
+  margin: 2px;
+}
