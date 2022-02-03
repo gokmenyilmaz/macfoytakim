@@ -356,7 +356,7 @@ async function FiksturMacFoyGetir(lig,mac_kodu) {
   window.history.replaceState(null, null, `?lig=${lig}&mac_kodu=${mac_kodu}`);
 
   document.getElementById("t1").innerHTML = fiksturData[0].fx_tk1;
-  document.getElementById("t1").innerHTML = fiksturData[0].fx_tk2;
+  document.getElementById("t2").innerHTML = fiksturData[0].fx_tk2;
 
   takimA = fiksturData[0].fx_tk1;
   takimB = fiksturData[0].fx_tk2;
